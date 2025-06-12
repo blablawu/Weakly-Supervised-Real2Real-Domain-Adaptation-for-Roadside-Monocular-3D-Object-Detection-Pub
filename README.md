@@ -6,7 +6,7 @@ This thesis focuses on the problems of real-to-real do- main adaptation in 3D ob
 ## News
 - [x] ***[16.08.2024]*** create repo
 - [x] ***[01.06.2025]*** We release code, log files
-- [] ***[10.06.2025]*** The specific code cannot be disclosed at the moment. Thank you for your understanding.
+- [ ] The specific code cannot be disclosed at the moment. Thank you for your understanding.
 
 ## Installation
 a. Clone this repository.
