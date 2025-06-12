@@ -5,13 +5,13 @@ This thesis focuses on the problems of real-to-real do- main adaptation in 3D ob
 
 ## News
 - [x] ***[16.08.2024]*** create repo
-- [x] ***[20240326]*** We release code, log files
-- [x] ***[20240326]*** release MonoUNI checkpoint on TUMTraf-I and RCooper
+- [x] ***[01.06.2025]*** We release code, log files
+- [] ***[10.06.2025]*** The specific code cannot be disclosed at the moment. Thank you for your understanding.
 
 ## Installation
 a. Clone this repository.
 ~~~
-git clone --branch heng/dev https://gitlab.lrz.de/000000000149F100/warm-3d.git
+git clone https://github.com/blablawu/Weakly-Supervised-Real2Real-Domain-Adaptation-for-Roadside-Monocular-3D-Object-Detection-Pub.git
 ~~~
 
 b. Install the dependent libraries as follows:
