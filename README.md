@@ -1,7 +1,12 @@
 # Weakly-Supervised Real2Real Domain Adap- tation for Roadside Monocular 3D Object De- tection
 
 ## Introduction
-This thesis focuses on the problems of real-to-real do- main adaptation in 3D object detection caused by variations in pitch angle and focal length of roadside cameras. MonoUNI is adopted as the baseline model, as it effectively mitigates these issues through its proposed normalized depth principle. Meanwhile, we employ WARM3D as our framework. To further assist the domain adaptation process, we introduce temporal infor- mation and corresponding constraints on top of the existing spatial constraints. Meanwhile, to improve the model’s ability of detecting out-of-distribution objects, we incorporate an off- the-shelf learnable 2D detector and 2D tracker. To test the performance of our method, we use three different KITTI-format datasets: Tumtraf-I, Rope3D and RCooper. Using 2D ground truth as weak labels, our method outperforms the Source-Only Baseline with improvement of 28.26%, 26.97% and 26.91% in AP3D@0.3 for easy, moderate and hard objects, respectively.
+This thesis focuses on the problems of real-to-real domain adaptation in 3D object detection caused by variations in pitch angle and focal length of roadside cameras. MonoUNI is adopted as the baseline model, as it effectively mitigates these issues through its proposed normalized depth principle. Meanwhile, we employ WARM3D as our framework. To further assist the domain adaptation process, we introduce temporal information and corresponding constraints on top of the existing spatial constraints. Meanwhile, to improve the model’s ability of detecting out-of-distribution objects, we incorporate an off-the-shelf learnable 2D detector and 2D tracker. To test the performance of our method, we use three different KITTI-format datasets: Tumtraf-I, Rope3D and RCooper. Using 2D ground truth as weak labels, our method outperforms the Source-Only Baseline with improvement of 28.26%, 26.97% and 26.91% in AP3D@0.3 for easy, moderate and hard objects, respectively.
+
+### 🔹 Highlights
+- Our method utilize **2D ground truth labels** `(x_min, y_min, x_max, y_max)` or **off-the-shelf 2D Detector or Tracker** generated 2D-pseudo labels for the training.
+- **No 3D annotations** are required, such as 3D bottom center `(x,y,z)`, 3D size `(height, width, length)`, or orientation `(yaw angle)`.
+- Despite the lack of 3D supervision, our approach achieves **promising detection performance** in the target domain.
 
 ## News
 - [x] ***[16.08.2024]*** create repo
