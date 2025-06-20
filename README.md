@@ -8,7 +8,7 @@ This thesis focuses on the problems of real-to-real domain adaptation in 3D obje
 - **No 3D annotations** are required, such as 3D bottom center `(x,y,z)`, 3D size `(height, width, length)`, or orientation `(yaw angle)`.
 - Despite the lack of 3D supervision, our approach achieves **promising detection performance** in the target domain.
 
-### 🚀 Overview of our Model
+### 💡 Overview of our Model
 Our framework follows a typical teacher-student mutual learning structure. It consists of two main stages: 
 - The Teacher Model Burn-In stage
 - The Student-Teacher Learning stage.
@@ -169,7 +169,7 @@ python yolov++_voc_to_coco_vid.py
 python yolov++_coco_vid_to_ovis.py
 ~~~
 
-### Quick start for YOLOV++
+### 🚀 Quick start for YOLOV++
 First, we train the base detector: YOLOX by the following command:
 ```bash
 python tools/train.py \
@@ -213,6 +213,10 @@ python tools/vid_demo.py \
 ```
 ⚠️According to which video you want to inference, you need to modify the --path above
 
+### 🎬 Demo of YOLOV++
+The following Gif shows the detecting performance of YOLOV++:
+![YOLOV++-TUMTraf-I](https://github.com/blablawu/Weakly-Supervised-Real2Real-Domain-Adaptation-for-Roadside-Monocular-3D-Object-Detection-Pub/blob/main/gifs/south_2_time_period_02_YOLOV++.gif)
+
 ## ⭐️ Implementation for Off-the-shelf 2D Tracker: MCMOT (extension of FairMOT)
 ### Installation of MCMOT
 The installation of FairMOT can be seen [**Here**](https://github.com/ifzhang/FairMOT). 
@@ -250,7 +254,10 @@ python gen_dataset_Tumtraf.py
 │   ├── ...
 ```
 
-### Quick start for MCMOT
+### Dataset-Preprocess: RCooper
+To be updated: the hyper-paramters of MCMOT still needs to be adjusted!
+
+### 🚀 Quick start for MCMOT
 First, we train the 2D Tracker by the following command:
 ~~~
 python /home/heng/workspace/MCMOT/src/train.py
@@ -264,9 +271,13 @@ python /home/heng/workspace/MCMOT/src/demo.py \
 ```
 ⚠️According to which video you want to inference, you need to modify the --input-video above
 
-### RCooper
-To be updated: the hyper-paramters of MCMOT still needs to be adjusted!
+### 🎬 Demo of MCMOT
+The following Gif shows the tracking performance of MCMOT:
+![MCMOT-TUMTraf-I](https://github.com/blablawu/Weakly-Supervised-Real2Real-Domain-Adaptation-for-Roadside-Monocular-3D-Object-Detection-Pub/blob/main/gifs/south_2_time_period_02_MCMOT.gif)
 
+## 🎬 Demo of 2D Ground Truth Annotations
+The following Gif shows the visualization of 2D Ground Truth Annotations:
+![GT-TUMTraf-I](https://github.com/blablawu/Weakly-Supervised-Real2Real-Domain-Adaptation-for-Roadside-Monocular-3D-Object-Detection-Pub/blob/main/gifs/south_2_GT.gif)
 
 ## ⭐️ Dataset-Preprocess for our approach
 ### TUMTraf-I (Target Domain)
@@ -297,7 +308,7 @@ python Tumtraf_Box3D_depth_dense_generator.py
 The generated example 3D Cube Depth and corresponding original image frame can be seen as follows:
 ![3D_Cube_Depth_original_image](https://github.com/blablawu/Weakly-Supervised-Real2Real-Domain-Adaptation-for-Roadside-Monocular-3D-Object-Detection-Pub/blob/main/imgs/3D_Cube_Depth_Original_image.png)
 
-![3D_Cube_Depth](https://github.com/blablawu/Weakly-Supervised-Real2Real-Domain-Adaptation-for-Roadside-Monocular-3D-Object-Detection-Pub/blob/main/imgs/3D_Cube_Depth.png.png)
+![3D_Cube_Depth](https://github.com/blablawu/Weakly-Supervised-Real2Real-Domain-Adaptation-for-Roadside-Monocular-3D-Object-Detection-Pub/blob/main/imgs/3D_Cube_Depth.png)
 
 * Step 2: Generate denorm-folder for TUMtraf-I (need to adjust arg.split of this script into 'training' or 'testing',repectively)
 ~~~
@@ -590,15 +601,15 @@ After this step the directory will be as follows:
     ~~~
 
 
-## ⭐️ Detecting demo on TUMTraf-I dataset
+## 🎬 Demo on TUMTraf-I dataset
 ![TUMTraf-I](https://github.com/blablawu/Weakly-Supervised-Real2Real-Domain-Adaptation-for-Roadside-Monocular-3D-Object-Detection-Pub/blob/main/gifs/TUMTraf-I_demo.gif)
 
 
-## ⭐️ Detecting demo on RCooper dataset
+## 🎬 Demo on RCooper dataset
 ![RCooper_corridor](https://github.com/blablawu/Weakly-Supervised-Real2Real-Domain-Adaptation-for-Roadside-Monocular-3D-Object-Detection-Pub/blob/main/gifs/RCooper_Corridor_demo.gif)
 
 
-## ⭐️ Acknowledgements
+## 🔍 Acknowledgements
 Many thanks to following codes that help us a lot in building this codebase:
 - [MonoUNI](https://github.com/Traffic-X/MonoUNI) 
 - [WARM3D](https://github.com/WARM-3D/WARM-3D)
