@@ -1,6 +1,6 @@
 # Weakly-Supervised Real2Real Domain Adap- tation for Roadside Monocular 3D Object De- tection
 
-## Introduction
+## ⭐️ Introduction
 This thesis focuses on the problems of real-to-real domain adaptation in 3D object detection caused by variations in pitch angle and focal length of roadside cameras. MonoUNI is adopted as the baseline model, as it effectively mitigates these issues through its proposed normalized depth principle. Meanwhile, we employ WARM3D as our framework. To further assist the domain adaptation process, we introduce temporal information and corresponding constraints on top of the existing spatial constraints. Meanwhile, to improve the model’s ability of detecting out-of-distribution objects, we incorporate an off-the-shelf learnable 2D detector and 2D tracker. To test the performance of our method, we use three different KITTI-format datasets: Tumtraf-I, Rope3D and RCooper. Using 2D ground truth as weak labels, our method outperforms the Source-Only Baseline with improvement of 28.26%, 26.97% and 26.91% in AP3D@0.3 for easy, moderate and hard objects, respectively.
 
 ### 🔹 Highlights
@@ -8,12 +8,21 @@ This thesis focuses on the problems of real-to-real domain adaptation in 3D obje
 - **No 3D annotations** are required, such as 3D bottom center `(x,y,z)`, 3D size `(height, width, length)`, or orientation `(yaw angle)`.
 - Despite the lack of 3D supervision, our approach achieves **promising detection performance** in the target domain.
 
-## News
+### 🚀 Overview of our Model
+Our framework follows a typical teacher-student mutual learning structure. It consists of two main stages: 
+- The Teacher Model Burn-In stage
+- The Student-Teacher Learning stage.
+The structure of our model can be seen as follows:
+![Model-Structure](https://github.com/blablawu/Weakly-Supervised-Real2Real-Domain-Adaptation-for-Roadside-Monocular-3D-Object-Detection/blob/main/imgs/Overview_model.png)
+
+
+## ⭐️ News
 - [x] ***[16.08.2024]*** create repo
 - [x] ***[01.06.2025]*** We release code, log files
 - [ ] The specific code cannot be disclosed at the moment. Thank you for your understanding.
 
-## Installation
+
+## ⭐️ Installation
 a. Clone this repository.
 ~~~
 git clone https://github.com/blablawu/Weakly-Supervised-Real2Real-Domain-Adaptation-for-Roadside-Monocular-3D-Object-Detection-Pub.git
@@ -30,7 +39,8 @@ conda env create -f real2real_DA.yml
 conda activate real2real_DA
 ~~~
 
-## Implementation for Off-the-shelf 2D Detector: YOLOV++ and 2D Tracker
+
+## ⭐️ Implementation for Off-the-shelf 2D Detector: YOLOV++ and 2D Tracker
 ### Installation of YOLOV++
 The installation of YOLOV++ can be seen [**Here**](https://github.com/YuHengsss/YOLOV/tree/master). 
 
@@ -258,7 +268,7 @@ python /home/heng/workspace/MCMOT/src/demo.py \
 To be updated: the hyper-paramters of MCMOT still needs to be adjusted!
 
 
-## Dataset-Preprocess
+## ⭐️ Dataset-Preprocess
 ### TUMTraf-I (Target Domain)
 - [x] Download the official TUMTraf-I dataset from [**Here**](https://innovation-mobility.com/tumtraf-dataset). 
 - [x] We used initial version of TUMTraf-I dataset located at: 
@@ -284,6 +294,9 @@ To be updated: the hyper-paramters of MCMOT still needs to be adjusted!
 ~~~
 python Tumtraf_Box3D_depth_dense_generator.py
 ~~~
+The generated example 3D Cube Depth and corresponding original image frame can be seen as follows:
+![3D_Cube_Depth_original_image](https://github.com/blablawu/Weakly-Supervised-Real2Real-Domain-Adaptation-for-Roadside-Monocular-3D-Object-Detection/blob/main/imgs/3D_Cube_Depth_Original_image.png)
+![3D_Cube_Depth](https://github.com/blablawu/Weakly-Supervised-Real2Real-Domain-Adaptation-for-Roadside-Monocular-3D-Object-Detection/blob/main/imgs/3D_Cube_Depth.png)
 
 * Step 2: Generate denorm-folder for TUMtraf-I (need to adjust arg.split of this script into 'training' or 'testing',repectively)
 ~~~
@@ -559,14 +572,16 @@ After this step the directory will be as follows:
     │   ├── label_2_4cls_for_train
     ```
 
-## Train
+
+## ⭐️ Train
     Modify the configuration parameters in config.yaml according to training requirements
     ⚠️ Details about training can be seen in config.yaml
     ~~~
     python train_val.py
     ~~~
 
-## Eval
+
+## ⭐️ Eval
     Modify the configuration parameters in config.yaml according to evaluation requirements
     ⚠️ Details about evaluation can be seen in config.yaml
     ~~~
@@ -574,14 +589,15 @@ After this step the directory will be as follows:
     ~~~
 
 
-## Detecting demo on TUMTraf-I dataset
+## ⭐️ Detecting demo on TUMTraf-I dataset
 ![TUMTraf-I](https://github.com/blablawu/Weakly-Supervised-Real2Real-Domain-Adaptation-for-Roadside-Monocular-3D-Object-Detection/blob/main/gifs/TUMTraf-I_demo.gif)
 
-## Detecting demo on RCooper dataset
+
+## ⭐️ Detecting demo on RCooper dataset
 ![RCooper_corridor](https://github.com/blablawu/Weakly-Supervised-Real2Real-Domain-Adaptation-for-Roadside-Monocular-3D-Object-Detection/blob/main/gifs/RCooper_Corridor_demo.gif)
 
 
-## Acknowledgements
+## ⭐️ Acknowledgements
 Many thanks to following codes that help us a lot in building this codebase:
 - [MonoUNI](https://github.com/Traffic-X/MonoUNI) 
 - [WARM3D](https://github.com/WARM-3D/WARM-3D)
