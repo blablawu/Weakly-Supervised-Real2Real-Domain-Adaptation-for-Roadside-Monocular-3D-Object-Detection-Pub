@@ -13,7 +13,7 @@ Our framework follows a typical teacher-student mutual learning structure. It co
 - The Teacher Model Burn-In stage
 - The Student-Teacher Learning stage.
 The structure of our model can be seen as follows:
-![Model-Structure](https://github.com/blablawu/Weakly-Supervised-Real2Real-Domain-Adaptation-for-Roadside-Monocular-3D-Object-Detection/blob/main/imgs/Overview_model.png)
+![Model-Structure](https://github.com/blablawu/Weakly-Supervised-Real2Real-Domain-Adaptation-for-Roadside-Monocular-3D-Object-Detection-Pub/blob/main/imgs/Overview_model.png)
 
 
 ## ⭐️ News
@@ -295,8 +295,9 @@ To be updated: the hyper-paramters of MCMOT still needs to be adjusted!
 python Tumtraf_Box3D_depth_dense_generator.py
 ~~~
 The generated example 3D Cube Depth and corresponding original image frame can be seen as follows:
-![3D_Cube_Depth_original_image](https://github.com/blablawu/Weakly-Supervised-Real2Real-Domain-Adaptation-for-Roadside-Monocular-3D-Object-Detection/blob/main/imgs/3D_Cube_Depth_Original_image.png)
-![3D_Cube_Depth](https://github.com/blablawu/Weakly-Supervised-Real2Real-Domain-Adaptation-for-Roadside-Monocular-3D-Object-Detection/blob/main/imgs/3D_Cube_Depth.png)
+![3D_Cube_Depth_original_image](https://github.com/blablawu/Weakly-Supervised-Real2Real-Domain-Adaptation-for-Roadside-Monocular-3D-Object-Detection-Pub/blob/main/imgs/3D_Cube_Depth_Original_image.png)
+
+![3D_Cube_Depth](https://github.com/blablawu/Weakly-Supervised-Real2Real-Domain-Adaptation-for-Roadside-Monocular-3D-Object-Detection-Pub/blob/main/imgs/3D_Cube_Depth.png.png)
 
 * Step 2: Generate denorm-folder for TUMtraf-I (need to adjust arg.split of this script into 'training' or 'testing',repectively)
 ~~~
@@ -590,11 +591,11 @@ After this step the directory will be as follows:
 
 
 ## ⭐️ Detecting demo on TUMTraf-I dataset
-![TUMTraf-I](https://github.com/blablawu/Weakly-Supervised-Real2Real-Domain-Adaptation-for-Roadside-Monocular-3D-Object-Detection/blob/main/gifs/TUMTraf-I_demo.gif)
+![TUMTraf-I](https://github.com/blablawu/Weakly-Supervised-Real2Real-Domain-Adaptation-for-Roadside-Monocular-3D-Object-Detection-Pub/blob/main/gifs/TUMTraf-I_demo.gif)
 
 
 ## ⭐️ Detecting demo on RCooper dataset
-![RCooper_corridor](https://github.com/blablawu/Weakly-Supervised-Real2Real-Domain-Adaptation-for-Roadside-Monocular-3D-Object-Detection/blob/main/gifs/RCooper_Corridor_demo.gif)
+![RCooper_corridor](https://github.com/blablawu/Weakly-Supervised-Real2Real-Domain-Adaptation-for-Roadside-Monocular-3D-Object-Detection-Pub/blob/main/gifs/RCooper_Corridor_demo.gif)
 
 
 ## ⭐️ Acknowledgements
