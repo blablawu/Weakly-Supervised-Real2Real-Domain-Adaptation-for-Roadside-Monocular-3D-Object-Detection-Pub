@@ -40,7 +40,7 @@ conda activate real2real_DA
 ~~~
 
 
-## ⭐️ Implementation for Off-the-shelf 2D Detector: YOLOV++ and 2D Tracker
+## ⭐️ Implementation for Off-the-shelf 2D Detector: YOLOV++
 ### Installation of YOLOV++
 The installation of YOLOV++ can be seen [**Here**](https://github.com/YuHengsss/YOLOV/tree/master). 
 
@@ -213,7 +213,7 @@ python tools/vid_demo.py \
 ```
 ⚠️According to which video you want to inference, you need to modify the --path above
 
-## Implementation for Off-the-shelf 2D Tracker: MCMOT (extension of FairMOT)
+## ⭐️ Implementation for Off-the-shelf 2D Tracker: MCMOT (extension of FairMOT)
 ### Installation of MCMOT
 The installation of FairMOT can be seen [**Here**](https://github.com/ifzhang/FairMOT). 
 
@@ -268,7 +268,7 @@ python /home/heng/workspace/MCMOT/src/demo.py \
 To be updated: the hyper-paramters of MCMOT still needs to be adjusted!
 
 
-## ⭐️ Dataset-Preprocess
+## ⭐️ Dataset-Preprocess for our approach
 ### TUMTraf-I (Target Domain)
 - [x] Download the official TUMTraf-I dataset from [**Here**](https://innovation-mobility.com/tumtraf-dataset). 
 - [x] We used initial version of TUMTraf-I dataset located at: 
