@@ -585,7 +585,7 @@ After this step the directory will be as follows:
     ```
 
 
-## ⭐️ Train
+## 🧪 Train
     Modify the configuration parameters in config.yaml according to training requirements
     ⚠️ Details about training can be seen in config.yaml
     ~~~
@@ -593,7 +593,7 @@ After this step the directory will be as follows:
     ~~~
 
 
-## ⭐️ Eval
+## 🧪 Eval
     Modify the configuration parameters in config.yaml according to evaluation requirements
     ⚠️ Details about evaluation can be seen in config.yaml
     ~~~
